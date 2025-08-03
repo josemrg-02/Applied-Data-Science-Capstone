@@ -1,30 +1,103 @@
-# :rocket: Applied Data Science Capstone
-This Capstone is the 10th (final) course in [IBM Data Science Professional Certificate](https://www.coursera.org/professional-certificates/ibm-data-science) specialization, and it actually summarizes in the form of project all materials that have been learned during this specialization.
-## :page_facing_up: Project Background
-SpaceX is the most successful company of the commercial space 
-age, making space travel affordable. The company advertises Falcon 
-9 rocket launches on its website, with a cost of 62 million dollars; 
-other providers cost upward of 165 million dollars each, much of the 
-savings is because SpaceX can reuse the first stage. Therefore, if we 
-can determine if the first stage will land, we can determine the cost 
-of a launch. Based on public information and machine learning 
-models, we are going to predict if SpaceX will reuse the first stage.
-## :page_facing_up: Questions to be answered 
-- How do variables such as payload mass, launch site, number of 
-flights, and orbits affect the success of the first stage landing? 
-- Does the rate of successful landings increase over the years? 
-- What is the best algorithm that can be used for binary classification 
-in this case?
-## :page_facing_up: Methodology
-  ### 1. Data collection methodology
-  - Using SpaceX Rest API
-  - Using Web Scrapping from Wikipedia
-  ### 2. Performed data wrangling
-  - Filtering the data
-  - Dealing with missing values
-  - Using One Hot Encoding to prepare the data to a binary classification
-  ### 3. Performed exploratory data analysis (EDA) using visualization and SQL
-  ### 4. Performed interactive visual analytics using Folium and Plotly Dash
-  ### 5. Performed predictive analysis using classification models
-  - Building, tuning and evaluation of classification models to ensure the best
-  results
+# Applied Data Science Capstone Project
+
+This repository contains the final project for the **IBM Data Science Professional Certificate** on Coursera. Over the course of nine preceding courses, you’ve built a strong foundation in Python, SQL, data visualization, machine learning, and more. In this capstone, you’ll bring all those skills together to tackle a real-world problem: predicting the reuse of a rocket’s first stage for SpaceX launches.
+
+---
+
+## 🚀 Project Background
+
+SpaceX has revolutionized the commercial space industry by dramatically reducing launch costs. One key innovation is the recovery and reuse of the Falcon 9 first stage, cutting per-launch expenses from over \$165 million (typical industry cost) down to about \$62 million. Accurately forecasting whether a first stage will land successfully—and thus be reused—can drive significant cost savings and operational planning.
+
+In this project, you will:
+
+* **Gather** launch and mission data from publicly available APIs and web sources
+* **Clean and prepare** the dataset for analysis and modeling
+* **Explore** the relationships between flight characteristics and landing success
+* **Visualize** insights interactively
+* **Build**, **tune**, and **evaluate** binary classification models to predict first-stage landings
+
+---
+
+## 🎯 Key Questions
+
+1. **Feature Impact**
+   How do factors such as payload mass, launch site, number of past flights, and target orbit influence the likelihood of a successful first-stage landing?
+
+2. **Temporal Trends**
+   Has SpaceX’s landing success rate improved over time?
+
+3. **Model Selection**
+   Which machine learning algorithm offers the best performance for this binary classification task?
+
+---
+
+## 🛠️ Methodology
+
+### 1. Data Collection
+
+* **SpaceX REST API**: Retrieve detailed launch and landing records.
+* **Web Scraping**: Extract supplementary data (e.g., orbital parameters) from Wikipedia.
+
+### 2. Data Wrangling
+
+* **Filtering**: Select relevant columns and mission records.
+* **Missing Values**: Identify and impute or remove incomplete entries.
+* **Feature Engineering**:
+
+  * One-hot encode categorical variables (e.g., launch site, orbit).
+  * Create new metrics (e.g., stage reuse count).
+
+### 3. Exploratory Data Analysis (EDA)
+
+* **Statistical Summaries**: Understand distributions and correlations.
+* **Visualizations**:
+
+  * Histograms and scatter plots for continuous variables.
+  * Bar charts for categorical breakdowns.
+* **SQL Queries**: Perform ad-hoc analysis using a relational database for data filtering and aggregation.
+
+### 4. Interactive Visual Analytics
+
+* **Folium**: Map launch sites and landing locations.
+* **Plotly Dash**: Build a dashboard to let users dynamically explore relationships between variables and landing outcomes.
+
+### 5. Predictive Modeling
+
+* **Model Building**: Train several classifiers (e.g., Logistic Regression, Random Forest, SVM).
+* **Hyperparameter Tuning**: Use grid search and cross-validation to optimize performance.
+* **Evaluation Metrics**:
+
+  * Accuracy, Precision, Recall, F1-score
+  * ROC-AUC curves
+* **Model Selection**: Compare models and select the best predictor.
+
+---
+
+## 📁 Repository Structure
+
+```
+├── data/
+│   ├── raw/                # Unprocessed API and scraped data
+│   └── processed/          # Cleaned datasets ready for analysis
+├── notebooks/
+│   ├── 1_data_collection.ipynb
+│   ├── 2_data_wrangling.ipynb
+│   ├── 3_eda.ipynb
+│   ├── 4_interactive_dash.ipynb
+│   └── 5_modeling.ipynb
+├── reports/
+│   └── presentation.pdf    # Final project slides
+├── app.py                  # Plotly Dash application
+└── README.md               # Project overview (this file)
+```
+
+---
+
+## 🔗 References
+
+* [SpaceX API Documentation](https://github.com/r-spacex/SpaceX-API)
+* [IBM Data Science Professional Certificate on Coursera](https://www.coursera.org/professional-certificates/ibm-data-science)
+
+---
+
+*By completing this capstone, you’ll demonstrate end-to-end data science skills—from data ingestion through to deploying predictive models—using real mission data from one of the most innovative companies in aerospace.*
