@@ -98,6 +98,4 @@ In this project, you will:
 * [SpaceX API Documentation](https://github.com/r-spacex/SpaceX-API)
 * [IBM Data Science Professional Certificate on Coursera](https://www.coursera.org/professional-certificates/ibm-data-science)
 
----
 
-*By completing this capstone, you’ll demonstrate end-to-end data science skills—from data ingestion through to deploying predictive models—using real mission data from one of the most innovative companies in aerospace.*
